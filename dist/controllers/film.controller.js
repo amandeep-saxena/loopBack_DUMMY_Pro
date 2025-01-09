@@ -216,9 +216,12 @@ let FilmController = class FilmController {
             }));
             console.log('Transformed data:', transformedData);
             const workbook = xlsx.utils.book_new();
+            // console.log(workbook)
             const worksheet = xlsx.utils.json_to_sheet(transformedData);
+            // console.log(worksheet)
             xlsx.utils.book_append_sheet(workbook, worksheet, 'filmData');
             const rep = xlsx.write(workbook, { type: 'buffer', bookType: 'xlsx' });
+            // console.log(rep)
             const transporter = nodemailer_1.default.createTransport({
                 service: "gmail",
                 auth: {

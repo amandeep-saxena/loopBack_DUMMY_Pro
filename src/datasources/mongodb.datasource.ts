@@ -13,7 +13,6 @@ import { juggler } from '@loopback/repository';
 //   useNewUrlParser: true
 // };
 
-
 const config = {
   name: 'mongodb',
   connector: 'mongodb', 
